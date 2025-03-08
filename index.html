@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的技术博客</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="brand">
+                <img src="./assets/images/avatar.jpg" alt="头像" class="avatar">
+                <h1>开发者日志</h1>
+            </div>
+            <nav class="nav">
+                <a href="/" class="active">首页</a>
+                <a href="#">归档</a>
+                <a href="#">关于</a>
+                <button id="theme-toggle">🌓</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="featured-posts">
+            <article class="post-card">
+                <div class="post-meta">
+                    <time datetime="2023-08-20">2023年8月20日</time>
+                    <span class="category">Web开发</span>
+                </div>
+                <h2><a href="posts/post-1.html">静态网站搭建指南</a></h2>
+                <p>详细介绍如何使用GitHub Pages部署个人博客...</p>
+            </article>
+
+            <article class="post-card">
+                <div class="post-meta">
+                    <time datetime="2023-08-18">2023年8月18日</time>
+                    <span class="category">前端技术</span>
+                </div>
+                <h2><a href="posts/post-2.html">现代CSS技巧分享</a></h2>
+                <p>探索最新的CSS特性与最佳实践...</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                <a href="mailto:your@email.com">Email</a>
+            </div>
+            <p>© 2025 我的博客 - 保留所有权利</p>
+        </div>
+    </footer>
+
+    <script>
+        // 主题切换
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            themeToggle.textContent = document.body.classList.contains('dark-theme') ? '🌞' : '🌓';
+        });
+    </script>
+</body>
+</html>
